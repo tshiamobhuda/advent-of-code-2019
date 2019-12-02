@@ -1,10 +1,7 @@
-import math
 import os
+import common
 
 fuelReq = 0
-
-def fuel_counter_upper(mass):
-    return math.floor((mass / 3)) - 2
 
 f = open(os.getcwd() + '/data/day1a.txt')
 while True:
@@ -12,7 +9,7 @@ while True:
     if len(line) == 0:
         break
 
-    fuelReq += fuel_counter_upper(int(line))
+    fuelReq += common.fuel_counter_upper(int(line))
 
 f.close()
 
