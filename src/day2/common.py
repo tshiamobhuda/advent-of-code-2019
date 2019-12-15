@@ -25,3 +25,14 @@ def computeIntCode(instructions):
         pos += 4
 
     return instructions
+
+def computeNounVerb(instructions):
+    for noun in range(0, 99):
+        for verb in range(0, 99):
+            instructions[1] = noun
+            instructions[2] = verb
+
+            res = computeIntCode(instructions.copy())
+
+            if res[0] == 19690720:
+                return 100 * noun + verb
