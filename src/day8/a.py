@@ -1,6 +1,9 @@
 from os import getcwd
 
-def buildLayers(width, height):
+def buildLayers():
+
+    width = 25
+    height = 6
 
     f = open(getcwd() + '/data/day8.txt')
     imgData = f.readline()
@@ -28,10 +31,7 @@ def buildLayers(width, height):
     return layers
 
 def main():
-    width = 25
-    height = 6
-
-    layers = buildLayers(width, height)
+    layers = buildLayers()
 
     layerStats = []
 
